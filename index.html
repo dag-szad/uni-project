@@ -23,39 +23,46 @@
     <link rel="stylesheet" href="./css/index.css" />
   </head>
   <body>
-    <header>
-      <div>
+    <div class="info">
+      <p class="info-text">Website in progress! 🔧</p>
+    </div>
+    <header class="header">
+      <div class="header-nav">
         <img
           src="./images/icons/vegan-svgrepo-com.svg"
           alt="Logo"
           width="50"
           height="50"
+          class="header-logo"
         />
         <nav>
-          <ul>
-            <li>Home</li>
-            <li>About</li>
+          <ul class="header-list">
+            <li class="header-content">Home</li>
+            <li class="header-content">About</li>
+            <li class="header-content">Blog</li>
           </ul>
         </nav>
       </div>
-      <div>
-        <ul>
-          <li>Sign up</li>
-          <li>Log in</li>
+      <div class="header-nav">
+        <ul class="header-list">
+          <li class="header-content">Sign up</li>
+          <li class="header-content">Log in</li>
         </ul>
       </div>
     </header>
 
-    <main>
-      <h1>Go Vegan</h1>
-      <h2>or eat the rich</h2>
-      <button type="button">Sign up</button>
+    <main class="main">
+      <div class="banner">
+        <h1 class="banner-title">Go Vegan</h1>
+        <h2 class="banner-subtitle">or eat the rich</h2>
+        <button type="button" class="banner-button">Sign up</button>
+      </div>
 
-      <div>
-        <form>
-          <label>Sign up</label>
-          <input type="text" placeholder="email" />
-          <input type="text" placeholder="password" />
+      <div class="overlay is-hidden">
+        <form class="modal">
+          <label class="modal-label">Sign up</label>
+          <input type="text" placeholder="email" class="modal-input"/>
+          <input type="text" placeholder="password" class="modal-input"/>
           <a href="">Forgot password</a>
           <button type="button">
             <img
@@ -69,7 +76,7 @@
       </div>
     </main>
 
-    <footer>
+    <footer class="footer">
       <div>
         <img
           src="./images/icons/vegan-svgrepo-com.svg"
