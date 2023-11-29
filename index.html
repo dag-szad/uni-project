@@ -21,6 +21,8 @@
     />
 
     <link rel="stylesheet" href="./css/index.css" />
+
+    <script src="./index.js" defer></script>
   </head>
   <body>
     <header> 
@@ -46,7 +48,7 @@
       </div>
       <div class="header-nav">
         <ul class="header-list">
-          <li class="header-content">Sign up</li>
+          <li class="header-content" >Sign up</li>
           <li class="header-content">Log in</li>
         </ul>
       </div>
@@ -56,16 +58,17 @@
       <div class="banner">
         <h1 class="banner-title">Go Vegan</h1>
         <h2 class="banner-subtitle">or eat the rich</h2>
-        <button type="button" class="banner-button">Sign up</button>
+        <button type="button" class="banner-button loginButton">Sign up</button>
       </div>
 
-      <!-- <div class="overlay">
+      <div class="overlay is-hidden">
         <form class="modal">
+          <span><img src="./images/icons/x-svgrepo-com.svg" alt="" width="25px" class="modal-exit"></span>
           <label class="modal-label">Sign up</label>
-          <input type="text" placeholder="email" class="modal-input"/>
-          <input type="text" placeholder="password" class="modal-input"/>
+          <input type="email" placeholder="email" class="modal-input emailInput"/>
+          <input type="password" placeholder="password" class="modal-input passwordInput"/>
           <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" class="modal-link" target="_blank">Forgot password</a>
-          <button type="button" class="modal-button">
+          <button type="button" class="modal-submit">
             <img
               src="./images/icons/right-arrow-svgrepo-com.svg"
               alt="Login icon"
@@ -74,7 +77,7 @@
             />
           </button>
         </form>
-      </div> -->
+      </div>
     </main>
 
     <footer>
