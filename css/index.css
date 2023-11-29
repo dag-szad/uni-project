@@ -73,7 +73,7 @@ a {
 }
 
 .main {
-  background-image: url(/images/banner/banner-l.jpg);
+  background-image: url("../images/banner/banner-l.jpg");
   background-position: center;
   background-attachment: scroll;
   background-size: cover;
