@@ -65,33 +65,33 @@
             generuj przykładowe posiłki
     -->
 
-    <div>
-        <h2>Calculate your makro</h2>
-        <form>
-            <label>
+    <div class="calc">
+        <h2 class="calc-title">Calculate your makro</h2>
+        <form class="form">
+            <label class="form-label">
                 Age
-                <input type="number" min="16" max="100" step="1">
+                <input type="number" min="16" max="100" step="1" class="form-input">
             </label>
-            <label>
+            <label class="form-label">
                 Gender
-                <select name="" id="">
+                <select name="" id="" class="form-input">
                     <option value="">Male</option>
                     <option value="">Female</option>
                     <option value="">Other</option>
                     <option value="">Rather not disclose</option>
                 </select>
             </label>
-            <label>
+            <label class="form-label">
                 Height
-                <input type="number" min="100" step="1" placeholder="cm">
+                <input type="number" min="100" step="1" placeholder="cm" class="form-input">
             </label>
-            <label>
+            <label class="form-label">
                 Weight
-                <input type="number" min="10" step="1" placeholder="kg">
+                <input type="number" min="10" step="1" placeholder="kg" class="form-input">
             </label>
-            <label>
+            <label class="form-label">
                 Activity
-                <select name="" id="">
+                <select name="" id="" class="form-input">
                     <option value="">Little or no exercise</option>
                     <option value="">1-3 times per week</option>
                     <option value="">4-5 times per week</option>
@@ -100,9 +100,9 @@
                     <option value="">Very intense exercise daily or physical job</option>
                 </select>
             </label>
-            <label>
+            <label class="form-label">
                 Goal
-                <select name="" id="">
+                <select name="" id="" class="form-input">
                     <option value="">Weight loss - 0.5 kg per week</option>
                     <option value="">Mild weight loss - 0.25 kg per week</option>
                     <option value="">Maintain weight</option>
@@ -111,36 +111,36 @@
                 </select>
             </label>
 
-            <button type="submit">Calculate</button>
+            <button type="submit" class="form-button">Calculate</button>
         </form>
 
         <div>
-            <ul>
-                <li>
-                    <h3>Food energy</h3>
-                    <p></p>
+            <ul class="makro">
+                <li class="makro-item">
+                    <h3 class="makro-title">Food energy</h3>
+                    <p class="makro-data"></p>
                 </li>
-                <li>
-                    <h3>Protein</h3>
-                    <p></p>
+                <li class="makro-item">
+                    <h3 class="makro-title">Protein</h3>
+                    <p class="makro-data"></p>
                 </li>
-                <li>
-                    <h3>Carbs</h3>
-                    <p></p>
+                <li class="makro-item">
+                    <h3 class="makro-title">Carbs</h3>
+                    <p class="makro-data"></p>
                 </li>
-                <li>
-                    <h3>Fat</h3>
-                    <p></p>
+                <li class="makro-item">
+                    <h3 class="makro-title">Fat</h3>
+                    <p class="makro-data"></p>
                 </li>
-                <li>
-                    <h3>Sugar</h3>
-                    <p></p>
+                <li class="makro-item">
+                    <h3 class="makro-title">Sugar</h3>
+                    <p class="makro-data"></p>
                 </li>
             </ul>
         </div>
 
         <div>
-            <button type="button">Generate meals</button>
+            <button type="button" class="form-button">Generate meals</button>
         </div>
 
     </div>
