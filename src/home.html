@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <title>Go Vegan | Home</title>
+  <meta name="description" content="Makro calculator for Vegans" />
+  <meta name="keywords" content="Vegan, calculator, calories, nutrition" />
+  <meta name="author" content="Dag" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Pacifico&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../node_modules/modern-normalize/modern-normalize.css">
+  <link rel="stylesheet" href="./css/home.css" />
+
+  <script src="./index.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="info">
+      <p class="info-text">Website in progress! 🔧</p>
+    </div>
+    <div class="header">
+      <div class="header-nav">
+        <svg width="50" height="50">
+          <use
+            href="./images/icons/symbol-defs.svg#icon-vegan"
+            class="header-icon">
+          </use>
+        </svg>
+        <nav>
+          <ul class="header-list">
+            <li class="header-content">Home</li>
+            <li class="header-content">About</li>
+            <li class="header-content">Blog</li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-nav">
+        <ul class="header-list">
+          <li class="header-content">Profile</li>
+          <li class="header-content">Log out</li>
+        </ul>
+      </div>
+  </header>
+
+  <main class="main">
+    <!-- 
+        kreator diety (użytkownik podaje wagę, wyliczane jest zapotrzebowanie kaloryczne, następnie generowane jest zestaw posiłków na 3 dni, każdy posiłek ma wygenerowane produkty wraz z zawartością białka, węglowodanów i tłuszczy)
+        
+            wiek
+            płeć
+            wzrost
+            waga
+            poziom aktywności
+            ustaw cel (zwiększa zapotrzebowanie)
+            
+            zapotrzebowanie na poszczególne składniki
+
+            generuj przykładowe posiłki
+    -->
+
+    <div>
+        <h2>Calculate your makro</h2>
+        <form>
+            <label>
+                Age
+                <input type="number" min="16" max="100" step="1">
+            </label>
+            <label>
+                Gender
+                <select name="" id="">
+                    <option value="">Male</option>
+                    <option value="">Female</option>
+                    <option value="">Other</option>
+                    <option value="">Rather not disclose</option>
+                </select>
+            </label>
+            <label>
+                Height
+                <input type="number" min="100" step="1" placeholder="cm">
+            </label>
+            <label>
+                Weight
+                <input type="number" min="10" step="1" placeholder="kg">
+            </label>
+            <label>
+                Activity
+                <select name="" id="">
+                    <option value="">Little or no exercise</option>
+                    <option value="">1-3 times per week</option>
+                    <option value="">4-5 times per week</option>
+                    <option value="">Daily or intense exercise 3-4 times per week</option>
+                    <option value="">Intense exercise 6-7 times per week</option>
+                    <option value="">Very intense exercise daily or physical job</option>
+                </select>
+            </label>
+            <label>
+                Goal
+                <select name="" id="">
+                    <option value="">Weight loss - 0.5 kg per week</option>
+                    <option value="">Mild weight loss - 0.25 kg per week</option>
+                    <option value="">Maintain weight</option>
+                    <option value="">Mild weight gain - 0.25 kg per week</option>
+                    <option value="">Weight gain - 0.5 kg per week</option>
+                </select>
+            </label>
+
+            <button type="submit">Calculate</button>
+        </form>
+
+        <div>
+            <ul>
+                <li>
+                    <h3>Food energy</h3>
+                    <p></p>
+                </li>
+                <li>
+                    <h3>Protein</h3>
+                    <p></p>
+                </li>
+                <li>
+                    <h3>Carbs</h3>
+                    <p></p>
+                </li>
+                <li>
+                    <h3>Fat</h3>
+                    <p></p>
+                </li>
+                <li>
+                    <h3>Sugar</h3>
+                    <p></p>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <button type="button">Generate meals</button>
+        </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer">
+      <div class="footer-logo">
+        <svg width="40" height="40">
+          <use
+            href="./images/icons/symbol-defs.svg#icon-vegan"
+            class="footer-icon">
+          </use>
+        </svg>
+        <p class="footer-name">Go Vegan</p>
+      </div>
+
+      <div class="footer-socials">
+        <p class="footer-socials-title">Social media</p>
+        <ul class="footer-socials-icons">
+          <li>
+            <a href="https://www.instagram.com/">
+              <svg width="35" height="35">
+                <use
+                  href="./images/icons/symbol-defs.svg#icon-instagram"
+                  class="footer-socials-icon">
+                </use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/">
+              <svg width="35" height="35">
+                <use
+                  href="./images/icons/symbol-defs.svg#icon-facebook"
+                  class="footer-socials-icon">
+                </use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.twitter.com/">
+              <svg width="35" height="35">
+                <use
+                  href="./images/icons/symbol-defs.svg#icon-twitter"
+                  class="footer-socials-icon">
+                </use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.https://github.com/dag-szad/uni-project.com/">
+              <svg width="35" height="35">
+                <use
+                  href="./images/icons/symbol-defs.svg#icon-git-repository"
+                  class="footer-socials-icon">
+                </use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-addon">
+        <p class="footer-title">Something useful</p>
+        <ul class="footer-links">
+          <li>Something 1</li>
+          <li>Something 2</li>
+          <li>Something 3</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="info">
+      <p class="info-text">Copyright or something ©</p>
+    </div>
+  </footer>
+</body>
+
+</html>
