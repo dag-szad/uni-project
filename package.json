@@ -4,10 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "node src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node src/index.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.10.3"
+  },
+  "dependencies": {
+    "modern-normalize": "^2.0.0"
+  }
 }
