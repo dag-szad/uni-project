@@ -27,7 +27,12 @@
     </div>
     <div class="header">
       <div class="header-nav">
-        <img src="./images/icons/vegan-svgrepo-com.svg" alt="Logo" width="50" height="50" class="header-logo" />
+        <svg width="50" height="50">
+          <use
+            href="./images/icons/symbol-defs.svg#icon-vegan"
+            class="header-icon">
+          </use>
+        </svg>
         <nav>
           <ul class="header-list">
             <li class="header-content">Home</li>
@@ -53,13 +58,23 @@
 
     <div class="overlay is-hidden">
       <form class="modal">
-        <span><img src="./images/icons/x-svgrepo-com.svg" alt="" width="25px" class="modal-exit"></span>
+        <span class="modal-exit">        
+            <svg width="25" height="25">
+              <use
+                href="./images/icons/symbol-defs.svg#icon-cancel">
+              </use>
+            </svg>
+        </span>
         <label class="modal-label">Sign up</label>
         <input type="email" placeholder="email" class="modal-input emailInput" />
         <input type="password" placeholder="password" class="modal-input passwordInput" />
         <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" class="modal-link" target="_blank">Forgot password</a>
         <button type="button" class="modal-submit">
-          <img src="./images/icons/right-arrow-svgrepo-com.svg" alt="Login icon" width="25" height="25" />
+          <svg width="25" height="25">
+            <use
+              href="./images/icons/symbol-defs.svg#icon-right-arrow">
+            </use>
+          </svg>
         </button>
       </form>
     </div>
@@ -68,31 +83,56 @@
   <footer>
     <div class="footer">
       <div class="footer-logo">
-        <img src="./images/icons/vegan-svgrepo-com.svg" alt="logo" width="50" height="50" />
-        <p>Go Vegan</p>
+        <svg width="40" height="40">
+          <use
+            href="./images/icons/symbol-defs.svg#icon-vegan"
+            class="footer-icon">
+          </use>
+        </svg>
+        <p class="footer-name">Go Vegan</p>
       </div>
 
       <div class="footer-socials">
-        <p>Social media</p>
+        <p class="footer-socials-title">Social media</p>
         <ul class="footer-socials-icons">
           <li>
             <a href="https://www.instagram.com/">
-              <img src="./images/icons/instagram-svgrepo-com.svg" alt="Instagram logo" width="50" height="50" />
+              <svg width="35" height="35">
+                <use
+                  href="./images/icons/symbol-defs.svg#icon-instagram"
+                  class="footer-socials-icon">
+                </use>
+              </svg>
             </a>
           </li>
           <li>
             <a href="https://www.facebook.com/">
-              <img src="./images/icons/facebook-svgrepo-com.svg" alt="Facebook logo" width="50" height="50" />
+              <svg width="35" height="35">
+                <use
+                  href="./images/icons/symbol-defs.svg#icon-facebook"
+                  class="footer-socials-icon">
+                </use>
+              </svg>
             </a>
           </li>
           <li>
             <a href="https://www.twitter.com/">
-              <img src="./images/icons/twitter-svgrepo-com.svg" alt="Twitter logo" width="50" height="50" />
+              <svg width="35" height="35">
+                <use
+                  href="./images/icons/symbol-defs.svg#icon-twitter"
+                  class="footer-socials-icon">
+                </use>
+              </svg>
             </a>
           </li>
           <li>
             <a href="https://www.https://github.com/dag-szad/uni-project.com/">
-              <img src="./images/icons/git-repository-svgrepo-com.svg" alt="Github logo" width="50" height="50" />
+              <svg width="35" height="35">
+                <use
+                  href="./images/icons/symbol-defs.svg#icon-git-repository"
+                  class="footer-socials-icon">
+                </use>
+              </svg>
             </a>
           </li>
         </ul>
