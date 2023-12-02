@@ -1,7 +1,10 @@
 body {
+  flex-direction: column;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
   font-family: Montserrat, sans-serif;
+  display: flex;
 }
 
 ul {
@@ -71,6 +74,80 @@ a {
 .header-content:hover, .header-content:active, .header-content:focus {
   color: var(--main-green);
   text-shadow: 0px 0px 2px var(--shadow-green);
+}
+
+.main {
+  background-color: var(--light-green);
+  padding: 25px 50px;
+}
+
+.calc {
+  background-color: var(--white);
+  flex-direction: column;
+  align-items: center;
+  width: 700px;
+  padding: 25px;
+  display: flex;
+}
+
+.calc-title {
+  font-size: 30px;
+}
+
+.form {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.form-label {
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  font-size: 18px;
+  display: flex;
+}
+
+.form-input {
+  margin: 5px;
+  font-size: 16px;
+}
+
+.form-button {
+  color: #f8f3f2;
+  background-color: var(--main-green);
+  box-shadow: 0px 0px 5px var(--black);
+  border: none;
+  border-radius: 50px;
+  margin: 20px;
+  padding: 15px 18px;
+  font-size: 20px;
+  font-weight: 500;
+  transition: background-color .3s ease-in-out;
+}
+
+.form-button:hover {
+  background-color: var(--alt-green);
+}
+
+.makro {
+  display: flex;
+}
+
+.makro-item {
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  display: flex;
+}
+
+.makro-data {
+  color: var(--overlay);
+  font-size: 20px;
+}
+
+footer {
+  margin-top: auto;
 }
 
 .footer {

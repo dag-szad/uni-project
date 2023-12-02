@@ -10,6 +10,10 @@ body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 ul {
@@ -89,6 +93,87 @@ a {
 .header-content:focus {
   color: var(--main-green);
   text-shadow: 0px 0px 2px var(--shadow-green);
+}
+
+.main {
+  background-color: var(--light-green);
+  padding: 25px 50px;
+}
+
+.calc {
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 25px;
+  width: 700px;
+}
+
+.calc-title {
+  font-size: 30px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 10px;
+
+  font-size: 18px;
+}
+
+.form-input {
+  margin: 5px;
+  font-size: 16px;
+}
+
+.form-button {
+  margin: 20px;
+  padding: 15px 18px;
+
+  color: #f8f3f2;
+  font-size: 20px;
+  font-weight: 500;
+
+  border-radius: 50px;
+  border: none;
+
+  background-color: var(--main-green);
+  box-shadow: 0px 0px 5px var(--black);
+
+  transition: background-color 300ms ease-in-out;
+}
+.form-button:hover {
+  background-color: var(--alt-green);
+}
+
+.makro {
+  display: flex;
+}
+
+.makro-item {
+  margin: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.makro-data {
+  font-size: 20px;
+  color: var(--overlay)
+}
+
+footer {
+  margin-top: auto;
 }
 
 .footer {
