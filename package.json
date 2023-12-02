@@ -1,11 +1,13 @@
 {
   "name": "uni-project",
   "version": "1.0.0",
-  "homepage": "https://dag-szad.github.io/uni-project/",
   "description": "",
-  "main": "index.js",
+  "homepage": "https://dag-szad.github.io/uni-project/",
   "scripts": {
-    "build": "node src/index.js"
+    "start": "parcel src/*.html --public-url /uni-project/",
+    "build": "parcel build src/*.html --public-url /uni-project/",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +16,7 @@
     "parcel": "^2.10.3"
   },
   "dependencies": {
+    "gh-pages": "^6.1.0",
     "modern-normalize": "^2.0.0"
   }
 }
