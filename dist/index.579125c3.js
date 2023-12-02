@@ -1,9 +1,9 @@
 // Query selectors
 const logInButton = document.querySelector(".loginButton");
-const modal = document.querySelector(".overlay");
 const exitButton = document.querySelector(".modal-exit");
 // Toggle modal
 function toggleModal() {
+    const modal = document.querySelector(".overlay");
     modal.classList.toggle("is-hidden");
 }
 // Switch open/close

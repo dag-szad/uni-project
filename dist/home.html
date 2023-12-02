@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="/home.c2b0d9e4.css">
   <link rel="stylesheet" href="/home.c5ecc01e.css">
 
-  <script src="/home.579125c3.js" defer=""></script>
+  <script src="/home.87f81111.js" defer=""></script>
 </head>
 
 <body>
@@ -64,73 +64,72 @@
     <div class="calc">
         <h2 class="calc-title">Calculate your makro</h2>
         <form class="form">
-            <label class="form-label">
+            <label class="form-label" for="userAge">
                 Age
-                <input type="number" min="16" max="100" step="1" class="form-input">
+                <input type="number" min="16" max="100" step="1" class="form-input" id="userAge">
             </label>
-            <label class="form-label">
+            <label class="form-label" for="userGender">
                 Gender
-                <select name="" id="" class="form-input">
-                    <option value="">Male</option>
-                    <option value="">Female</option>
-                    <option value="">Other</option>
-                    <option value="">Rather not disclose</option>
+                <select class="form-input" id="userGender">
+                    <option value="1">Male</option>
+                    <option value="2">Female</option>
+                    <option value="3">Other</option>
+                    <option value="4">Rather not disclose</option>
                 </select>
             </label>
-            <label class="form-label">
+            <label class="form-label" for="userHeight">
                 Height
-                <input type="number" min="100" step="1" placeholder="cm" class="form-input">
+                <input type="number" min="100" step="1" placeholder="cm" class="form-input" id="userHeight">
             </label>
-            <label class="form-label">
+            <label class="form-label" for="userWeight">
                 Weight
-                <input type="number" min="10" step="1" placeholder="kg" class="form-input">
+                <input type="number" min="10" step="1" placeholder="kg" class="form-input" id="userWeight">
             </label>
-            <label class="form-label">
+            <label class="form-label" for="userActivity">
                 Activity
-                <select name="" id="" class="form-input">
-                    <option value="">Little or no exercise</option>
-                    <option value="">1-3 times per week</option>
-                    <option value="">4-5 times per week</option>
-                    <option value="">Daily or intense exercise 3-4 times per week</option>
-                    <option value="">Intense exercise 6-7 times per week</option>
-                    <option value="">Very intense exercise daily or physical job</option>
+                <select class="form-input" id="userActivity">
+                    <option value="1">Little or no exercise</option>
+                    <option value="2">1-3 times per week</option>
+                    <option value="3">4-5 times per week</option>
+                    <option value="4">Daily or intense exercise 3-4 times per week</option>
+                    <option value="5">Intense exercise 6-7 times per week</option>
                 </select>
             </label>
-            <label class="form-label">
+            <label class="form-label" for="userGoal">
                 Goal
-                <select name="" id="" class="form-input">
-                    <option value="">Weight loss - 0.5 kg per week</option>
-                    <option value="">Mild weight loss - 0.25 kg per week</option>
-                    <option value="">Maintain weight</option>
-                    <option value="">Mild weight gain - 0.25 kg per week</option>
-                    <option value="">Weight gain - 0.5 kg per week</option>
+                <select class="form-input" id="userGoal">
+                    <option value="1">Weight loss - 10% body mass per week</option>
+                    <option value="2">Mild weight loss - 5% body mass per week</option>
+                    <option value="3">Maintain weight</option>
+                    <option value="4">Mild weight gain - 5% body mass per week</option>
+                    <option value="5">Weight gain - 10% body mass per week</option>
                 </select>
             </label>
 
-            <button type="submit" class="form-button">Calculate</button>
+            <button type="submit" class="form-button" id="submitButton">Calculate</button>
         </form>
 
         <div>
             <ul class="makro">
                 <li class="makro-item">
                     <h3 class="makro-title">Food energy</h3>
-                    <p class="makro-data"></p>
+                    <div class="makro-data" id="makroFoodEnergy"></div>
                 </li>
                 <li class="makro-item">
                     <h3 class="makro-title">Protein</h3>
-                    <p class="makro-data"></p>
+                    <div class="makro-data" id="makroProtein"></div>
                 </li>
                 <li class="makro-item">
                     <h3 class="makro-title">Carbs</h3>
-                    <p class="makro-data"></p>
+                    <div class="makro-data" id="makroCarbs"></div>
                 </li>
                 <li class="makro-item">
                     <h3 class="makro-title">Fat</h3>
-                    <p class="makro-data"></p>
+                    <div class="makro-data" id="makroFat"></div>
                 </li>
                 <li class="makro-item">
                     <h3 class="makro-title">Sugar</h3>
-                    <p class="makro-data"></p>
+                    <div class="makro-data" id="makroSugar"></div>
                 </li>
             </ul>
         </div>
