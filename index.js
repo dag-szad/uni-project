@@ -34,19 +34,55 @@ const emailInput = document.querySelector(".emailInput");
 const passwordInput = document.querySelector(".passwordInput");
 const submitButton = document.querySelector(".modal-submit");
 
-// Login data
-const email = "user@mail.com";
-const password = "user1";
+// Adding data to local storage
+function signIn() {
+  const emailData = emailInput.value;
+  const passwordData = passwordInput.value;
 
-// Login authentication
+  if (!emailData || !passwordData) {
+    console.log("Please fill in both email and password.");
+    return;
+  }
+
+  // Login data
+  const userLoginData = {
+    email: emailData,
+    password: passwordData,
+  };
+
+  localStorage.setItem("userLoginData", JSON.stringify(userLoginData));
+  console.log("User data added", userLoginData);
+
+  window.location.href = "home.html";
+  toggleModal();
+}
+
+//Login authentication
 function logIn() {
-  if (emailInput.value === email && passwordInput.value === password) {
-    window.location.href = "home.html";
-  } else if (emailInput.value !== email || passwordInput.value !== password) {
-    window.alert("Invalid user data");
-  } else {
-    console.log("Some error");
+  const savedLoginDataString = localStorage.getItem("userLoginData");
+
+  if (savedLoginDataString) {
+    const savedLoginData = JSON.parse(savedLoginDataString);
+
+    if (
+      emailInput.value === savedLoginData.email &&
+      passwordInput.value === savedLoginData.password
+    ) {
+      window.location.href = "home.html";
+      toggleModal();
+    } else {
+      window.alert("Invalid user data");
+    }
   }
 }
 
-submitButton.addEventListener("click", logIn);
+// Simple logging
+function logging() {
+  if (localStorage.length === 0) {
+    signIn();
+  } else {
+    logIn();
+  }
+}
+
+submitButton.addEventListener("click", logging);
