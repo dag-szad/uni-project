@@ -1,28 +1,45 @@
-function basicCalculation() {
-  const age = parseFloat(document.querySelector("#userAge").value);
-  const height = parseFloat(document.querySelector("#userHeight").value);
-  const weight = parseFloat(document.querySelector("#userWeight").value);
-  const gender = document.querySelector("#userGender").value;
-  const activity = document.querySelector("#userActivity").value;
-  const goal = document.querySelector("#userGoal").value;
-
-  const basicCalories =
-    (10 * weight + 6.25 * height - 5 * age + genderOptions(gender)) *
-    activityOptions(activity) *
-    goalOptions(goal);
-    
-  return basicCalories;
-}
-
 const submitButton = document.querySelector("#submitButton");
 
 submitButton.addEventListener("click", (event) => {
   event.preventDefault();
-  const basicCaloriesResult = basicCalculation().toFixed(0);
+
+  const age = parseFloat(document.querySelector("#userAge").value);
+  const gender = document.querySelector("#userGender").value;
+  const height = parseFloat(document.querySelector("#userHeight").value);
+  const weight = parseFloat(document.querySelector("#userWeight").value);
+  const activity = document.querySelector("#userActivity").value;
+  const goal = document.querySelector("#userGoal").value;
+
+
+  const basicCaloriesResult = basicCalculation(weight, height, age, gender, activity, goal).toFixed(0);
+  const proteinCountResult = proteinCount(weight).toFixed(1);
+  const carbsCountResult = carbsCount(activity, weight).toFixed(1);
+  const fatsCountResult = fatsCount(goal, weight).toFixed(1);
+
 
   const makroFoodEnergy = document.querySelector("#makroFoodEnergy");
-  makroFoodEnergy.innerHTML = `<p>${basicCaloriesResult}</p>`;
+  makroFoodEnergy.innerHTML = `<p>${basicCaloriesResult} kcal</p>`;
+
+  const makroProtein = document.querySelector("#makroProtein");
+  makroProtein.innerHTML = `<p>${proteinCountResult} g</p>`;
+
+  const makroCarbs = document.querySelector("#makroCarbs");
+  makroCarbs.innerHTML = `<p>${carbsCountResult} g</p>`;
+  
+  const makroFats = document.querySelector("#makroFats");
+  makroFats.innerHTML = `<p>${fatsCountResult} g</p>`;
 });
+
+
+function basicCalculation(weight, height, age, gender, activity, goal) {
+  const basicCalories =
+    (10 * weight + 6.25 * height - 5 * age + genderOptions(gender)) *
+    activityOptions(activity) *
+    goalOptions(goal);
+
+  return basicCalories;
+}
+
 
 function genderOptions(genderValue) {
   switch (genderValue) {
@@ -38,6 +55,7 @@ function genderOptions(genderValue) {
       break;
   }
 }
+
 
 function activityOptions(activityValue) {
   switch (activityValue) {
@@ -56,6 +74,7 @@ function activityOptions(activityValue) {
   }
 }
 
+
 function goalOptions(goalValue) {
   switch (goalValue) {
     case "1":
@@ -72,3 +91,45 @@ function goalOptions(goalValue) {
       break;
   }
 }
+
+
+function proteinCount(weight) {
+  const proteinAmount = weight * 0.8;
+  return proteinAmount;
+}
+
+
+function carbsCount(activityValue, weight) {
+  switch (activityValue) {
+    case "1":
+      return weight * 6;
+    case "2":
+      return weight * 7;
+    case "3":
+      return weight * 8;
+    case "4":
+      return weight * 9;
+    case "5":
+      return weight * 10;
+    default:
+      break;
+  }
+}
+
+function fatsCount(goalValue, weight) {
+  switch (goalValue) {
+    case "1":
+      return weight * 0.5;
+    case "2":
+      return weight * 0.6;
+    case "3":
+      return weight * 0.7;
+    case "4":
+      return weight * 0.9;
+    case "5":
+      return weight * 1;
+    default:
+      break;
+  }
+}
+
