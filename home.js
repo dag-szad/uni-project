@@ -1,5 +1,6 @@
 import { basicCalculation } from './js/home/basicCalculator.js';
 import { proteinCount, carbsCount, fatsCount } from './js/home/advancedCalculator.js';
+import { searchRecipes } from './js/api/foodApi.js';
 
 const submitButton = document.querySelector("#submitButton");
 
@@ -32,3 +33,11 @@ submitButton.addEventListener("click", (event) => {
   const makroFats = document.querySelector("#makroFats");
   makroFats.innerHTML = `<p>${fatsCountResult} g</p>`;
 });
+
+const generateButton = document.querySelector("#generateButton");
+
+generateButton.addEventListener("click", (event) => {
+  event.preventDefault();
+  console.log("Button clicked");
+  searchRecipes();
+})
