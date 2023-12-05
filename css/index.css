@@ -85,7 +85,7 @@ a {
 }
 
 .main {
-  background-image: url("../images/banner/banner-l.jpg");
+  background-image: url("../images/banner/banner-m.jpg");
   background-position: center;
   background-attachment: scroll;
   background-size: cover;
@@ -149,7 +149,7 @@ a {
   background-color: var(--alt-green);
 }
 
-.overlay {
+.signin-overlay, .login-overlay {
   position: fixed;
   background-color: var(--overlay);
   width: 100%;
@@ -165,7 +165,9 @@ a {
   opacity: 0;
 }
 
-.modal {
+.signin-form {
+  background-color: var(--white);
+
   position: absolute;
   left: 50%;
   top: 50%;
@@ -175,7 +177,9 @@ a {
 
   background-color: var(--white);
   width: 450px;
-  height: 450px;
+  height: 480px;
+
+  border-radius: 25px;
 
   display: flex;
   flex-direction: column;
@@ -183,18 +187,40 @@ a {
   align-items: center;
 }
 
-.modal-exit {
+.login-form {
+  background-color: var(--white);
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  opacity: 100%;
+
+  background-color: var(--white);
+  width: 450px;
+  height: 425px;
+
+  border-radius: 25px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.signin-modal-exit, .login-modal-exit {
   margin-left: 375px;
 }
 
-.modal-label {
+.signin-modal-label, .login-modal-label {
     color: var(--black);
     font-size: 30px;
     font-weight: 500;
     margin: 25px;
 }
 
-.modal-input {
+.signin-modal-input, .login-modal-input {
   margin: 10px;
   padding: 15px 40px;
 
@@ -212,25 +238,28 @@ a {
   transition: box-shadow 300ms ease-in-out;
 }
 
-.modal-input:hover,
-.modal-input:active,
-.modal-input:focus {
+.signin-modal-input:hover,
+.signin-modal-input:active,
+.signin-modal-input:focus,
+.login-modal-input:hover,
+.login-modal-input:active,
+.login-modal-input:focus {
   box-shadow: 0px 0px 5px var(--main-green);
 }
 
-.modal-link {
+.login-modal-link {
   margin: 10px;
   color: var(--main-green);
 }
 
-.modal-link:visited,
-.modal-link:hover,
-.modal-link:active,
-.modal-link:focus {
+.login-modal-link:visited,
+.login-modal-link:hover,
+.login-modal-link:active,
+.login-modal-link:focus {
   color: var(--alt-green);
 }
 
-.modal-submit {
+.signin-modal-submit, .login-modal-submit {
   margin: 20px;
   padding: 15px 18px;
 
@@ -247,9 +276,12 @@ a {
   transition: background-color 300ms ease-in-out;
 }
 
-.modal-button:hover,
-.modal-button:active,
-.modal-button:focus {
+.signin-modal-button:hover,
+.signin-modal-button:active,
+.signin-modal-button:focus,
+.login-modal-button:hover,
+.login-modal-button:active,
+.login-modal-button:focus {
   background-color: var(--shadow-green);
 }
 

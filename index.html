@@ -16,7 +16,7 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="./css/index.css" />
 
-  <script src="./index.js" defer></script>
+  <script type="module" src="./index.js" defer></script>
 </head>
 
 <body>
@@ -42,8 +42,8 @@
       </div>
       <div class="header-nav">
         <ul class="header-list">
-          <li class="header-content">Sign up</li>
-          <li class="header-content">Log in</li>
+          <li class="header-content signInButton">Sign up</li>
+          <li class="header-content logInButton">Log in</li>
         </ul>
       </div>
   </header>
@@ -52,23 +52,45 @@
     <div class="banner">
       <h1 class="banner-title">Go Vegan</h1>
       <h2 class="banner-subtitle">or eat the rich</h2>
-      <button type="button" class="banner-button loginButton">Sign up</button>
+      <button type="button" class="banner-button signInButton">Sign up</button>
     </div>
 
-    <div class="overlay is-hidden">
-      <form class="modal">
-        <span class="modal-exit">        
+    <div class="signin-overlay is-hidden">
+      <form class="signin-form is-hidden">
+        <span class="signin-modal-exit">        
             <svg width="25" height="25">
               <use
                 href="./images/icons/symbol-defs.svg#icon-cancel">
               </use>
             </svg>
         </span>
-        <label class="modal-label">Sign up</label>
-        <input type="email" placeholder="email" class="modal-input emailInput" />
-        <input type="password" placeholder="password" class="modal-input passwordInput" />
-        <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" class="modal-link" target="_blank">Forgot password</a>
-        <button type="button" class="modal-submit">
+        <label class="signin-modal-label">Sign up</label>
+        <input type="text" placeholder="name" class="signin-modal-input" id="signInNameInput"/>
+        <input type="email" placeholder="email" class="signin-modal-input" id="signInEmailInput"/>
+        <input type="password" placeholder="password" class="signin-modal-input" id="signInPasswordInput"/>
+        <button type="button" class="signin-modal-submit" id="submitSignInButton">
+          <svg width="25" height="25">
+            <use
+              href="./images/icons/symbol-defs.svg#icon-right-arrow">
+            </use>
+          </svg>
+        </button>
+      </form>
+    </div>
+
+    <div class="login-overlay is-hidden">
+      <form class="login-form is-hidden">
+        <span class="login-modal-exit">        
+            <svg width="25" height="25">
+              <use
+                href="./images/icons/symbol-defs.svg#icon-cancel">
+              </use>
+            </svg>
+        </span>
+        <label class="login-modal-label">Log in</label>
+        <input type="text" placeholder="name" class="login-modal-input" id="logInNameInput"/>
+        <input type="password" placeholder="password" class="login-modal-input" id="logInPasswordInput"/>
+        <button type="button" class="login-modal-submit" id="submitLogInButton">
           <svg width="25" height="25">
             <use
               href="./images/icons/symbol-defs.svg#icon-right-arrow">
