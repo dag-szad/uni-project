@@ -1,88 +1,59 @@
+// Imports
+import { handleModalToggle } from "./js/index/modalOpening.js";
+import { signIn } from "./js/index/signIn.js";
+import { logIn } from "./js/index/logIn.js";
+
+
+// Sign in query selectors and events
+const signInButtons = document.querySelectorAll(".signInButton");
+signInButtons.forEach(function(signInButton) {
+    signInButton.addEventListener("click", (event) => {
+        handleModalToggle(event, "signin");
+    })
+  });
+
+const exitSignInButton = document.querySelector(".signin-modal-exit");
+exitSignInButton.addEventListener("click", (event) => {
+    handleModalToggle(event, "signin");
+})
+
+window.addEventListener("keydown", (event) => {
+    handleModalToggle(event, "signin");
+})
+
+
+// Log in query selectors and events
+const logInButton = document.querySelector(".logInButton");
+logInButton.addEventListener("click", (event) => {
+    handleModalToggle(event, "login");
+})
+
+const exitLogInButton = document.querySelector(".login-modal-exit");
+exitLogInButton.addEventListener("click", (event) => {
+    handleModalToggle(event, "login");
+})
+
+window.addEventListener("keydown", (event) => {
+    handleModalToggle(event, "login");
+})
+
 // Query selectors
-const logInButton = document.querySelector(".loginButton");
-const exitButton = document.querySelector(".modal-exit");
+// const nameInput = document.querySelector("#nameInput");
+// const emailInput = document.querySelector("#emailInput");
+// const passwordInput = document.querySelector("#passwordInput");
+// const submitSignIn = document.querySelector("#signInButton");
 
-// Toggle modal
-function toggleModal() {
-  const modal = document.querySelector(".overlay");
-  modal.classList.toggle("is-hidden");
-}
+// // Simple logging
+// function logging() {
+//   // const stored
 
-// Switch open/close
-function handleModalToggle(event) {
-  switch (event.type) {
-    case "click":
-      toggleModal();
-      break;
-    case "keydown":
-      if (event.key === "Escape") {
-        toggleModal();
-      }
-      break;
-    default:
-      break;
-  }
-}
+//   if (emailInput.value === 0) {
+//     signIn(nameInput.value, emailInput.value, passwordInput.value);
+//     toggleModal();
+//   } else {
+//     logIn(emailInput.value, passwordInput.value);
+//     toggleModal();
+//   }
+// }
 
-// Events
-logInButton.addEventListener("click", handleModalToggle);
-exitButton.addEventListener("click", handleModalToggle);
-window.addEventListener("keydown", handleModalToggle);
-
-// Query selectors
-const emailInput = document.querySelector(".emailInput");
-const passwordInput = document.querySelector(".passwordInput");
-const submitButton = document.querySelector(".modal-submit");
-
-// Adding data to local storage
-function signIn() {
-  const emailData = emailInput.value;
-  const passwordData = passwordInput.value;
-
-  if (!emailData || !passwordData) {
-    console.log("Please fill in both email and password.");
-    return;
-  }
-
-  // Login data
-  const userLoginData = {
-    email: emailData,
-    password: passwordData,
-  };
-
-  localStorage.setItem("userLoginData", JSON.stringify(userLoginData));
-  console.log("User data added", userLoginData);
-
-  window.location.href = "home.html";
-  toggleModal();
-}
-
-//Login authentication
-function logIn() {
-  const savedLoginDataString = localStorage.getItem("userLoginData");
-
-  if (savedLoginDataString) {
-    const savedLoginData = JSON.parse(savedLoginDataString);
-
-    if (
-      emailInput.value === savedLoginData.email &&
-      passwordInput.value === savedLoginData.password
-    ) {
-      window.location.href = "home.html";
-      toggleModal();
-    } else {
-      window.alert("Invalid user data");
-    }
-  }
-}
-
-// Simple logging
-function logging() {
-  if (localStorage.length === 0) {
-    signIn();
-  } else {
-    logIn();
-  }
-}
-
-submitButton.addEventListener("click", logging);
+// submitSignIn.addEventListener("click", signIn);
