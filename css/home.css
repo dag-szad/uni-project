@@ -165,10 +165,6 @@ a {
   color: var(--overlay)
 }
 
-footer {
-  margin-top: auto;
-}
-
 .footer {
   background-color: var(--white);
   display: flex;

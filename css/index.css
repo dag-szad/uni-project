@@ -121,6 +121,7 @@ a {
   background-attachment: scroll;
   background-size: cover;
   background-color: var(--main-green);
+  flex: 1;
 }
 
 .banner {
@@ -128,7 +129,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  height: 100%;
   padding: 50px;
 }
 
@@ -338,7 +339,6 @@ a {
   display: flex;
   flex-direction: column;
 
-  margin-top: auto;
   border-top: var(--main-green) solid 2px;
 }
 
