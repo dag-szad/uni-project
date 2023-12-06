@@ -16,36 +16,42 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="./css/index.css" />
 
-  <script type="module" src="./index.js" defer></script>
+  <script type="module" src="./js/index/index.js" defer></script>
 </head>
 
 <body>
-  <header>
+  <header class="header">
     <div class="info">
       <p class="info-text">Website in progress! 🔧</p>
     </div>
-    <div class="header">
-      <div class="header-nav">
-        <svg width="50" height="50">
-          <use
-            href="./images/icons/symbol-defs.svg#icon-vegan"
-            class="header-icon">
-          </use>
-        </svg>
+
+    <div class="nav">
+      <div class="nav-main">
         <nav>
-          <ul class="header-list">
-            <li class="header-content">Home</li>
-            <li class="header-content">About</li>
-            <li class="header-content">Blog</li>
+          <ul class="nav-list">
+            <li class="nav-content">Home</li>
+            <li class="nav-content">About</li>
+            <li class="nav-content">Blog</li>
           </ul>
         </nav>
       </div>
-      <div class="header-nav">
-        <ul class="header-list">
-          <li class="header-content signInButton">Sign up</li>
-          <li class="header-content logInButton">Log in</li>
+
+      <div class="nav-logo">
+        <svg width="55" height="55">
+          <use
+            href="./images/icons/symbol-defs.svg#icon-vegan"
+            class="logo">
+          </use>
+        </svg>
+      </div>
+
+      <div class="nav-actions">
+        <ul class="nav-list">
+          <li class="nav-content signInButton">Sign up</li>
+          <li class="nav-content logInButton">Log in</li>
         </ul>
       </div>
+
   </header>
 
   <main class="main">
@@ -60,7 +66,7 @@
         <span class="signin-modal-exit">        
             <svg width="25" height="25">
               <use
-                href="./images/icons/symbol-defs.svg#icon-cancel">
+                href="./images/icons/symbol-defs.svg#icon-cancel" class="exit-icon">
               </use>
             </svg>
         </span>
@@ -71,7 +77,7 @@
         <button type="button" class="signin-modal-submit" id="submitSignInButton">
           <svg width="25" height="25">
             <use
-              href="./images/icons/symbol-defs.svg#icon-right-arrow">
+              href="./images/icons/symbol-defs.svg#icon-right-arrow"  class="submit-icon">
             </use>
           </svg>
         </button>
@@ -83,17 +89,18 @@
         <span class="login-modal-exit">        
             <svg width="25" height="25">
               <use
-                href="./images/icons/symbol-defs.svg#icon-cancel">
+                href="./images/icons/symbol-defs.svg#icon-cancel" class="exit-icon">
               </use>
             </svg>
         </span>
         <label class="login-modal-label">Log in</label>
         <input type="text" placeholder="name" class="login-modal-input" id="logInNameInput"/>
         <input type="password" placeholder="password" class="login-modal-input" id="logInPasswordInput"/>
+        <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" class="login-modal-link" target="_blank">Forgot password</a>
         <button type="button" class="login-modal-submit" id="submitLogInButton">
           <svg width="25" height="25">
             <use
-              href="./images/icons/symbol-defs.svg#icon-right-arrow">
+              href="./images/icons/symbol-defs.svg#icon-right-arrow"  class="submit-icon">
             </use>
           </svg>
         </button>
@@ -101,8 +108,8 @@
     </div>
   </main>
 
-  <footer>
-    <div class="footer">
+  <footer class="footer">
+    <div class="footer-main">
       <div class="footer-logo">
         <svg width="40" height="40">
           <use
@@ -162,9 +169,8 @@
       <div class="footer-addon">
         <p class="footer-title">Something useful</p>
         <ul class="footer-links">
-          <li>Something 1</li>
-          <li>Something 2</li>
-          <li>Something 3</li>
+          <li>Something</li>
+          <li>Something</li>
         </ul>
       </div>
     </div>

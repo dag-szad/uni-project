@@ -1,7 +1,7 @@
 // Imports
-import { handleModalToggle } from "./js/index/modalOpening.js";
-import { signIn } from "./js/index/signIn.js";
-import { logIn } from "./js/index/logIn.js";
+import { handleModalToggle } from "./modalOpening.js";
+import { signIn } from "./signIn.js";
+import { logIn } from "./logIn.js";
 
 // Sign in query selectors and events
 const signInButtons = document.querySelectorAll(".signInButton");

@@ -3,6 +3,10 @@ body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 ul {
@@ -13,6 +17,7 @@ ul {
 a {
   text-decoration: none;
 }
+
 
 /* Colors */
 :root {
@@ -25,7 +30,14 @@ a {
   --overlay: #19191975;
 }
 
-/* Styling*/
+
+/* Styling - header*/
+.header {
+  display: flex;
+  flex-direction: column;
+  border-bottom: var(--main-green) solid 2px;
+}
+
 .info {
   background-color: var(--main-green);
 }
@@ -40,50 +52,69 @@ a {
   padding: 5px;
 }
 
-.header {
-  background-color: var(--white);
-
+.nav {
   display: flex;
-  justify-content: space-between;
-  padding: 15px 50px;
-
-  border-bottom: var(--main-green) solid 2px;
+  padding: 15px 40px;
+  background-color: var(--white);
 }
 
-.header-icon {
+.nav-main {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.nav-list {
+  display: flex;
+}
+
+.nav-content {
+  color: var(--black);
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 20px;
+
+  transition: color 300ms ease-in-out, text-shadow 300ms ease-in-out;
+}
+
+.nav-content:hover,
+.nav-content:active,
+.nav-content:focus {
+  color: var(--main-green);
+  text-shadow: 0px 0px 2px var(--shadow-green);
+}
+
+.nav-logo {
+  flex-grow: 1;
+  flex-basis: 0;
+
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
   padding: 0 25px;
   fill: var(--black);
 
   transition: fill 300ms ease-in-out, filter 300ms ease-in-out;
 }
 
-.header-icon:hover {
+.logo:hover,
+.logo:active,
+.logo:focus {
   fill: var(--main-green);
   filter: drop-shadow(0px 0px 2px var(--shadow-green));
 }
 
-.header-nav,
-.header-list {
+.nav-actions {
+  flex-grow: 1;
+  flex-basis: 0;
+
   display: flex;
-  padding: 0;
+  justify-content: flex-end;
 }
 
-.header-content {
-  color: var(--black);
-  font-size: 20px;
-  font-weight: 500;
-  margin: 0 25px;
 
-  transition: color 300ms ease-in-out, text-shadow 300ms ease-in-out;
-}
-
-.header-content:hover,
-.header-content:active,
-.header-content:focus {
-  color: var(--main-green);
-  text-shadow: 0px 0px 2px var(--shadow-green);
-}
-
+/* Styling - main*/
 .main {
   background-image: url("../images/banner/banner-m.jpg");
   background-position: center;
@@ -102,19 +133,20 @@ a {
 }
 
 .banner-title {
+  color: var(--white);
+  text-shadow: 0px 0px 5px var(--black);
+  text-align: center;
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
   font-size: 10rem;
 
   margin: 0;
   padding: 50px 50px 0 50px;
-
-  color: var(--white);
-  text-shadow: 0px 0px 5px var(--black);
-  text-align: center;
 }
 
 .banner-subtitle {
+  color: var(--light-green);
+  text-shadow: 0px 0px 5px var(--black);
   font-family: "Pacifico", cursive;
   font-size: 4rem;
 
@@ -122,8 +154,6 @@ a {
   padding: 15px 0 0 250px;
   rotate: calc(-10deg);
 
-  color: #b5cc94;
-  text-shadow: 0px 0px 5px var(--black);
 }
 
 .banner-button {
@@ -156,17 +186,16 @@ a {
   height: 100vh;
   top: 0;
   left: 0;
-  z-index: 999;
+  z-index: 9;
 }
 
 .is-hidden {
   visibility: hidden;
-
-  opacity: 0;
 }
 
 .signin-form {
   background-color: var(--white);
+  box-shadow: 0px 0px 5px var(--black);
 
   position: absolute;
   left: 50%;
@@ -189,6 +218,7 @@ a {
 
 .login-form {
   background-color: var(--white);
+  box-shadow: 0px 0px 5px var(--black);
 
   position: absolute;
   left: 50%;
@@ -199,7 +229,7 @@ a {
 
   background-color: var(--white);
   width: 450px;
-  height: 425px;
+  height: 450px;
 
   border-radius: 25px;
 
@@ -211,6 +241,17 @@ a {
 
 .signin-modal-exit, .login-modal-exit {
   margin-left: 375px;
+}
+
+.exit-icon {
+  fill: var(--black);
+  transition: fill 300ms ease-in-out;
+}
+
+.exit-icon:hover,
+.exit-icon:active,
+.exit-icon:focus {
+  fill: var(--main-green);
 }
 
 .signin-modal-label, .login-modal-label {
@@ -259,9 +300,13 @@ a {
   color: var(--alt-green);
 }
 
+.submit-icon {
+  fill: var(--light-green);
+}
+
 .signin-modal-submit, .login-modal-submit {
   margin: 20px;
-  padding: 15px 18px;
+  padding: 16px 18px 15px;
 
   color: #f8f3f2;
   font-size: 20px;
@@ -285,16 +330,22 @@ a {
   background-color: var(--shadow-green);
 }
 
+
+/* Styling - header*/
 .footer {
   background-color: var(--white);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 50px;
 
+  display: flex;
+  flex-direction: column;
+
+  margin-top: auto;
   border-top: var(--main-green) solid 2px;
 }
 
+.footer-main {
+  display: flex;
+  padding: 15px 60px;
+}
 
 .footer-logo {
   display: flex;
@@ -308,21 +359,20 @@ a {
 
 .footer-name {
   color: var(--black);
+  font-weight: 700;
+  font-size: 30px;
 
   margin-left: 10px;
-
-  font-weight: 700;
-  font-size: 30px; 
 }
 
 .footer-socials {
   color: var(--black);
   font-size: 18px;
-  font-weight: 500;
-  margin: 0 25px;
+  font-weight: 400;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 
   flex-grow: 1;
 }
@@ -332,6 +382,7 @@ a {
 }
 
 .footer-socials-icons {
+  margin: 10px auto 0 ;
   display: flex;
 }
 
@@ -351,8 +402,10 @@ a {
   color: var(--black);
   font-size: 18px;
   font-weight: 500;
-  margin: 0 25px;
-  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer-links li{
