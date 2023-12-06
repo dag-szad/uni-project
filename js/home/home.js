@@ -1,6 +1,6 @@
-import { basicCalculation } from './js/home/basicCalculator.js';
-import { proteinCount, carbsCount, fatsCount } from './js/home/advancedCalculator.js';
-import { searchRecipes } from './js/api/foodApi.js';
+import { basicCalculation } from './basicCalculator.js';
+import { proteinCount, carbsCount, fatsCount } from './advancedCalculator.js';
+import { searchRecipes } from '../api/foodApi.js';
 
 const submitButton = document.querySelector("#submitButton");
 
