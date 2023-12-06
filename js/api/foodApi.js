@@ -1,9 +1,7 @@
-const apiKey = "858fdc921a634c1c98cebc6dae75edbb";
-
 export async function searchRecipes() {
   try {
     const response = await fetch(
-      "https://api.spoonacular.com/recipes/complexSearch?apiKey=858fdc921a634c1c98cebc6dae75edbb&diet=vegan"
+      `https://api.spoonacular.com/recipes/complexSearch?apiKey=858fdc921a634c1c98cebc6dae75edbb&diet=vegan`
     );
     const data = await response.json();
 
