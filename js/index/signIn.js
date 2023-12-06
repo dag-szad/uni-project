@@ -1,6 +1,6 @@
-const nameInput = document.querySelector("#nameInput");
-const emailInput = document.querySelector("#emailInput");
-const passwordInput = document.querySelector("#passwordInput");
+const nameInput = document.querySelector("#signInNameInput");
+const emailInput = document.querySelector("#signInEmailInput");
+const passwordInput = document.querySelector("#signInPasswordInput");
 
 export function signIn() {
   const nameData = nameInput.value;
@@ -21,12 +21,8 @@ export function signIn() {
   } else {
     const newUser = new User(nameData, emailData, passwordData);
 
-    const uniqueUser = `userloginData_${newUser.name}`;
-    localStorage.setItem(uniqueUser, JSON.stringify(newUser));
+    localStorage.setItem("uniqueUser", JSON.stringify(newUser));
 
     window.location.href = "home.html";
   }
 }
-
-const submitSignIn = document.querySelector("#submitSignInButton");
-submitSignIn.addEventListener("click", signIn);
