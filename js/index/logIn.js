@@ -1,17 +1,16 @@
+const nameInput = document.querySelector("#logInNameInput");
+const passwordInput = document.querySelector("#logInPasswordInput");
+
 //Login authentication
-export function logIn(emailInput, passwordInput) {
-  const savedLoginDataString = localStorage.getItem("userLoginData");
+export function logIn() {
+  const nameData = nameInput.value;
+  const passwordData = passwordInput.value;
 
-  if (savedLoginDataString) {
-    const savedLoginData = JSON.parse(savedLoginDataString);
+  const storedUser = JSON.parse(localStorage.getItem("uniqueUser"));
 
-    if (
-      emailInput === savedLoginData.email &&
-      passwordInput === savedLoginData.password
-    ) {
-      window.location.href = "home.html";
-    } else {
-      window.alert("Invalid user data");
-    }
+  if (nameData === storedUser.name && passwordData === storedUser.password) {
+    window.location.href = "home.html";
+  } else {
+    window.alert("User not found");
   }
 }
