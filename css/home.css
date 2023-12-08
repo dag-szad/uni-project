@@ -181,11 +181,11 @@ a {
   background-color: var(--alt-green);
 }
 
-.makro {
+.makro, .results-makro {
   display: flex;
 }
 
-.makro-item {
+.makro-item, .results-makro-item {
   margin: 20px;
 
   display: flex;
@@ -193,7 +193,7 @@ a {
   align-items: center;
 }
 
-.makro-data {
+.makro-data, .results-makro-data {
   font-size: 20px;
   color: var(--overlay)
 }
