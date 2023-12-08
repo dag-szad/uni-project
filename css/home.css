@@ -29,7 +29,13 @@ a {
   --overlay: #19191975;
 }
 
-/* Styling*/
+/* Styling - header*/
+.header {
+  display: flex;
+  flex-direction: column;
+  border-bottom: var(--main-green) solid 2px;
+}
+
 .info {
   background-color: var(--main-green);
 }
@@ -44,63 +50,90 @@ a {
   padding: 5px;
 }
 
-.header {
-  background-color: var(--white);
-
+.nav {
   display: flex;
-  justify-content: space-between;
-  padding: 15px 50px;
-
-  border-bottom: var(--main-green) solid 2px;
+  padding: 15px 40px;
+  background-color: var(--white);
 }
 
-.header-icon {
+.nav-main {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.nav-list {
+  display: flex;
+}
+
+.nav-content {
+  color: var(--black);
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 20px;
+
+  transition: color 300ms ease-in-out, text-shadow 300ms ease-in-out;
+}
+
+.nav-content:hover,
+.nav-content:active,
+.nav-content:focus {
+  color: var(--main-green);
+  text-shadow: 0px 0px 2px var(--shadow-green);
+}
+
+.nav-logo {
+  flex-grow: 1;
+  flex-basis: 0;
+
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
   padding: 0 25px;
   fill: var(--black);
 
   transition: fill 300ms ease-in-out, filter 300ms ease-in-out;
 }
 
-.header-icon:hover {
+.logo:hover,
+.logo:active,
+.logo:focus {
   fill: var(--main-green);
   filter: drop-shadow(0px 0px 2px var(--shadow-green));
 }
 
-.header-nav,
-.header-list {
+.nav-actions {
+  flex-grow: 1;
+  flex-basis: 0;
+
   display: flex;
-  padding: 0;
-}
-
-.header-content {
-  color: var(--black);
-  font-size: 20px;
-  font-weight: 500;
-  margin: 0 25px;
-
-  transition: color 300ms ease-in-out, text-shadow 300ms ease-in-out;
-}
-
-.header-content:hover,
-.header-content:active,
-.header-content:focus {
-  color: var(--main-green);
-  text-shadow: 0px 0px 2px var(--shadow-green);
+  justify-content: flex-end;
 }
 
 .main {
   background-color: var(--light-green);
+  display: flex;
+  flex: 1;
   padding: 25px 50px;
 }
 
 .calc {
   background-color: var(--white);
   display: flex;
+  flex: 1;
+  flex-basis: 0;
   flex-direction: column;
   align-items: center;
 
   padding: 25px;
+  margin: 20px;
   width: 700px;
+
+  background-color: var(--white);
+  box-shadow: 0px 0px 5px var(--black);
+
+  border-radius: 25px;
 }
 
 .calc-title {
@@ -165,14 +198,59 @@ a {
   color: var(--overlay)
 }
 
-.footer {
+.nutri {
   background-color: var(--white);
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  flex: 1;
+  flex-basis: 0;
   align-items: center;
-  padding: 15px 50px;
+
+  padding: 25px;
+  margin: 20px;
+  width: 700px;
+
+  background-color: var(--white);
+  box-shadow: 0px 0px 5px var(--black);
+
+  border-radius: 25px;
+}
+
+.nutri-title {
+  font-size: 30px;
+}
+
+.nutri-options {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.ingredients {
+  flex: 1;
+  flex-basis: 0;
+  text-align: center;
+}
+
+.meals {
+  flex: 1;
+  flex-basis: 0;
+  text-align: center;
+}
+
+/* Styling - footer*/
+.footer {
+  background-color: var(--white);
+
+  display: flex;
+  flex-direction: column;
 
   border-top: var(--main-green) solid 2px;
+}
+
+.footer-main {
+  display: flex;
+  padding: 15px 60px;
 }
 
 .footer-logo {
@@ -187,21 +265,20 @@ a {
 
 .footer-name {
   color: var(--black);
-
-  margin-left: 10px;
-
   font-weight: 700;
   font-size: 30px;
+
+  margin-left: 10px;
 }
 
 .footer-socials {
   color: var(--black);
   font-size: 18px;
-  font-weight: 500;
-  margin: 0 25px;
+  font-weight: 400;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 
   flex-grow: 1;
 }
@@ -211,10 +288,11 @@ a {
 }
 
 .footer-socials-icons {
+  margin: 10px auto 0 ;
   display: flex;
 }
 
-.footer-socials-icons li {
+.footer-socials-icons li{
   margin: 5px;
 }
 
@@ -230,11 +308,13 @@ a {
   color: var(--black);
   font-size: 18px;
   font-weight: 500;
-  margin: 0 25px;
-  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.footer-links li {
+.footer-links li{
   color: var(--black);
   font-size: 16px;
   font-weight: 500;

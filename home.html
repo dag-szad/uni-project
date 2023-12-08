@@ -20,32 +20,38 @@
 </head>
 
 <body>
-  <header>
+  <header class="header">
     <div class="info">
       <p class="info-text">Website in progress! 🔧</p>
     </div>
-    <div class="header">
-      <div class="header-nav">
-        <svg width="50" height="50">
-          <use
-            href="./images/icons/symbol-defs.svg#icon-vegan"
-            class="header-icon">
-          </use>
-        </svg>
+
+    <div class="nav">
+      <div class="nav-main">
         <nav>
-          <ul class="header-list">
-            <li class="header-content">Home</li>
-            <li class="header-content">About</li>
-            <li class="header-content">Blog</li>
+          <ul class="nav-list">
+            <li class="nav-content">Home</li>
+            <li class="nav-content">About</li>
+            <li class="nav-content">Blog</li>
           </ul>
         </nav>
       </div>
-      <div class="header-nav">
-        <ul class="header-list">
-          <li class="header-content">Profile</li>
-          <li class="header-content">Log out</li>
+
+      <div class="nav-logo">
+        <svg width="55" height="55">
+          <use
+            href="./images/icons/symbol-defs.svg#icon-vegan"
+            class="logo">
+          </use>
+        </svg>
+      </div>
+
+      <div class="nav-actions">
+        <ul class="nav-list">
+          <li class="nav-content">Sign up</li>
+          <li class="nav-content">Log out</li>
         </ul>
       </div>
+
   </header>
 
   <main class="main">
@@ -67,11 +73,11 @@
             </label>
             <label class="form-label" for="userHeight">
                 Height
-                <input type="number" min="100" step="1" placeholder="cm" class="form-input" id="userHeight">
+                <input type="number" min="100" max="250" step="1" placeholder="cm" class="form-input" id="userHeight">
             </label>
             <label class="form-label" for="userWeight">
                 Weight
-                <input type="number" min="10" step="1" placeholder="kg" class="form-input" id="userWeight">
+                <input type="number" min="10" max="500" step="1" placeholder="kg" class="form-input" id="userWeight">
             </label>
             <label class="form-label" for="userActivity">
                 Activity
@@ -118,15 +124,38 @@
             </ul>
         </div>
 
-        <div>
-            <button type="button" class="form-button" id="generateButton">Generate meals</button>
-        </div>
+        
+      </div>
+      <div class="nutri">
+        <h2 class="nutri-title">Calculate nutrients</h2>
+        <div class="nutri-options">
+          <div class="ingredients">
+            <h3>By ingredients</h3>
+            <form>
+              <select id="ingredientsSelect">
+
+              </select>
+            </form>
+          </div>
+          <div class="meals">
+            <h3>By meals</h3>
+            <div>
+                <button type="button" class="form-button" id="generateButton">Generate meals</button>
+                <div id="generatedMeals">
+
+                </div>
+            </div>
+      </div>
+
+    </div>
+    
+      
 
     </div>
   </main>
 
-  <footer>
-    <div class="footer">
+  <footer class="footer">
+    <div class="footer-main">
       <div class="footer-logo">
         <svg width="40" height="40">
           <use
@@ -186,9 +215,8 @@
       <div class="footer-addon">
         <p class="footer-title">Something useful</p>
         <ul class="footer-links">
-          <li>Something 1</li>
-          <li>Something 2</li>
-          <li>Something 3</li>
+          <li>Something</li>
+          <li>Something</li>
         </ul>
       </div>
     </div>
