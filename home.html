@@ -123,34 +123,72 @@
                 </li>
             </ul>
         </div>
-
-        
-      </div>
-      <div class="nutri">
-        <h2 class="nutri-title">Calculate nutrients</h2>
-        <div class="nutri-options">
-          <div class="ingredients">
-            <h3>By ingredients</h3>
-            <form>
-              <select id="ingredientsSelect">
-
-              </select>
-            </form>
-          </div>
-          <div class="meals">
-            <h3>By meals</h3>
-            <div>
-                <button type="button" class="form-button" id="generateButton">Generate meals</button>
-                <div id="generatedMeals">
-
-                </div>
-            </div>
-      </div>
-
     </div>
-    
-      
 
+    <div class="nutri">
+      <h2 class="nutri-title">Calculate nutrients</h2>
+
+      <div class="nutri-options">
+        <div class="ingredients">
+          <h3>By ingredients</h3>
+          <form>
+            <label for="searchList">Name</label>
+            <input type="text" list="searchList" placeholder="Search ingredients..." id="searchInput" >
+            <datalist id="searchList"></datalist>
+            <label for="searchList">Amount</label>
+            <input type="number" placeholder="g" id="amount">
+            <button type="button" id="addButton">Add</button>
+          </form>
+        </div>
+
+        <!-- <div class="meals">
+          <h3>By meals</h3>
+          <div>
+            <button type="button" class="form-button" id="generateButton">Generate meals</button>
+            <div id="generatedMeals">
+            </div>
+          </div>
+        </div> -->
+      </div>
+
+      <div class="user-data">
+        <h3>Name</h3>
+        <h3>Amount</h3>
+        <ul class="user-list" id="userList">
+          
+        </ul>
+        
+
+      </div>
+
+      <div class="results">
+          <ul class="results-makro">
+            <li class="results-makro-item">
+                <h3 class="results-makro-title">Food energy</h3>
+                <div class="results-makro-data" id="makroFoodEnergyResult">
+                  <p>0 kcal</p>
+                </div>
+            </li>
+            <li class="makro-item">
+                <h3 class="results-makro-title">Protein</h3>
+                <div class="results-makro-data" id="makroProteinResult">
+                  <p>0 g</p>
+                </div>
+            </li>
+            <li class="makro-item">
+                <h3 class="results-makro-title">Carbs</h3>
+                <div class="results-makro-data" id="makroCarbsResult">
+                  <p>0 g</p>
+                </div>
+            </li>
+            <li class="makro-item">
+                <h3 class="results-makro-title">Fats</h3>
+                <div class="results-makro-data" id="makroFatsResult">
+                  <p>0 g</p>
+                </div>
+            </li>
+        </ul>
+      </div>
     </div>
   </main>
 
