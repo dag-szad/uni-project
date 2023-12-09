@@ -15,9 +15,9 @@ ul {
 }
 
 a {
+  color: inherit;
   text-decoration: none;
 }
-
 
 /* Colors */
 :root {
@@ -29,7 +29,6 @@ a {
   --black: #191919;
   --overlay: #19191975;
 }
-
 
 /* Styling - header*/
 .header {
@@ -71,6 +70,9 @@ a {
   color: var(--black);
   font-size: 20px;
   font-weight: 500;
+
+  cursor: pointer;
+
   margin: 0 20px;
 
   transition: color 300ms ease-in-out, text-shadow 300ms ease-in-out;
@@ -89,6 +91,8 @@ a {
 
   display: flex;
   justify-content: center;
+
+  cursor: pointer;
 }
 
 .logo {
@@ -112,7 +116,6 @@ a {
   display: flex;
   justify-content: flex-end;
 }
-
 
 /* Styling - main*/
 .main {
@@ -154,7 +157,6 @@ a {
   margin: 0;
   padding: 15px 0 0 250px;
   rotate: calc(-10deg);
-
 }
 
 .banner-button {
@@ -164,6 +166,8 @@ a {
   color: var(--white);
   font-size: 20px;
   font-weight: 500;
+
+  cursor: pointer;
 
   border-radius: 50px;
   border: none;
@@ -180,7 +184,8 @@ a {
   background-color: var(--alt-green);
 }
 
-.signin-overlay, .login-overlay {
+.signin-overlay,
+.login-overlay {
   position: fixed;
   background-color: var(--overlay);
   width: 100%;
@@ -240,8 +245,11 @@ a {
   align-items: center;
 }
 
-.signin-modal-exit, .login-modal-exit {
+.signin-modal-exit,
+.login-modal-exit {
   margin-left: 375px;
+
+  cursor: pointer;
 }
 
 .exit-icon {
@@ -249,20 +257,23 @@ a {
   transition: fill 300ms ease-in-out;
 }
 
-.exit-icon:hover,
+.signin-modal-exit:hover .exit-icon,
+.login-modal-exit:hover .exit-icon,
 .exit-icon:active,
 .exit-icon:focus {
   fill: var(--main-green);
 }
 
-.signin-modal-label, .login-modal-label {
-    color: var(--black);
-    font-size: 30px;
-    font-weight: 500;
-    margin: 25px;
+.signin-modal-label,
+.login-modal-label {
+  color: var(--black);
+  font-size: 30px;
+  font-weight: 500;
+  margin: 25px;
 }
 
-.signin-modal-input, .login-modal-input {
+.signin-modal-input,
+.login-modal-input {
   margin: 10px;
   padding: 15px 40px;
 
@@ -305,13 +316,16 @@ a {
   fill: var(--light-green);
 }
 
-.signin-modal-submit, .login-modal-submit {
+.signin-modal-submit,
+.login-modal-submit {
   margin: 20px;
   padding: 16px 18px 15px;
 
   color: #f8f3f2;
   font-size: 20px;
   font-weight: 500;
+
+  cursor: pointer;
 
   border-radius: 50px;
   border: none;
@@ -330,7 +344,6 @@ a {
 .login-modal-button:focus {
   background-color: var(--shadow-green);
 }
-
 
 /* Styling - footer*/
 .footer {
@@ -379,19 +392,25 @@ a {
 
 .footer-socials-title {
   margin: 0;
+  cursor: default;
 }
 
 .footer-socials-icons {
-  margin: 10px auto 0 ;
+  margin: 10px auto 0;
   display: flex;
 }
 
-.footer-socials-icons li{
+.footer-socials-icon {
   margin: 5px;
 }
 
-.footer-socials-icon {
+.footer-socials-svg {
   fill: var(--black);
+  transition: fill 300ms ease-in-out;
+}
+
+.footer-socials-icon:hover .footer-socials-svg {
+  fill: var(--main-green);
 }
 
 .footer-addon {
@@ -403,15 +422,27 @@ a {
   font-size: 18px;
   font-weight: 500;
 
+  margin: 17px;
+
+  cursor: default;
+
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.footer-links li{
-  color: var(--black);
+.footer-links {
   font-size: 16px;
   font-weight: 500;
   margin: 5px;
   text-align: center;
+}
+
+.footer-link {
+  color: var(--black);
+  transition: color 300ms ease-in-out;
+}
+
+.footer-link:hover {
+  color: var(--main-green);
 }
