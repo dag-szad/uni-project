@@ -3,7 +3,7 @@ import { handleModalToggle } from "./modalOpening.js";
 import { signIn } from "./signIn.js";
 import { logIn } from "./logIn.js";
 
-// Sign in query selectors and events
+// Sign up query selectors and events
 const signInButtons = document.querySelectorAll(".signInButton");
 signInButtons.forEach(function (signInButton) {
   signInButton.addEventListener("click", (event) => {
@@ -35,7 +35,7 @@ window.addEventListener("keydown", (event) => {
   handleModalToggle(event, "login");
 });
 
-// Sign in event
+// Sign up event
 const submitSignIn = document.querySelector("#submitSignInButton");
 submitSignIn.addEventListener("click", signIn);
 
