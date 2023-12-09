@@ -19,6 +19,13 @@ export async function searchRecipes() {
       randomIndexes.forEach((index) => {
         const recipe = data.results[index];
         console.log(recipe.title);
+
+        const mealsDiv = document.querySelector("#generatedMeals");
+        const meal = document.createElement('p');
+        
+        meal.appendChild(document.createTextNode(`${recipe.title}`));
+        mealsDiv.appendChild(meal);
+
       });
     } else {
       console.log("No recipes to show");
