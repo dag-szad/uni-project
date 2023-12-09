@@ -29,9 +29,9 @@
       <div class="nav-main">
         <nav>
           <ul class="nav-list">
-            <li class="nav-content">Home</li>
-            <li class="nav-content">About</li>
-            <li class="nav-content">Blog</li>
+            <li class="nav-content"><a href="#">Home</a></li>
+            <li class="nav-content"><a href="#">About</a></li>
+            <li class="nav-content"><a href="#">Blog</a></li>
           </ul>
         </nav>
       </div>
@@ -47,8 +47,8 @@
 
       <div class="nav-actions">
         <ul class="nav-list">
-          <li class="nav-content">Sign up</li>
-          <li class="nav-content">Log out</li>
+          <li class="nav-content signInButton">Profile</li>
+          <li class="nav-content logInButton">Log out</li>
         </ul>
       </div>
 
@@ -56,73 +56,72 @@
 
   <main class="main">
     <div class="calc">
-        <h2 class="calc-title">Calculate your makro</h2>
-        <form class="form">
-            <label class="form-label" for="userAge">
-                Age
-                <input type="number" min="16" max="100" step="1" class="form-input" id="userAge">
-            </label>
-            <label class="form-label" for="userGender">
-                Gender
-                <select class="form-input" id="userGender">
-                    <option value="1">Male</option>
-                    <option value="2">Female</option>
-                    <option value="3">Other</option>
-                    <option value="4">Rather not disclose</option>
-                </select>
-            </label>
-            <label class="form-label" for="userHeight">
-                Height
-                <input type="number" min="100" max="250" step="1" placeholder="cm" class="form-input" id="userHeight">
-            </label>
-            <label class="form-label" for="userWeight">
-                Weight
-                <input type="number" min="10" max="500" step="1" placeholder="kg" class="form-input" id="userWeight">
-            </label>
-            <label class="form-label" for="userActivity">
-                Activity
-                <select class="form-input" id="userActivity">
-                    <option value="1">Little or no exercise</option>
-                    <option value="2">1-3 times per week</option>
-                    <option value="3">4-5 times per week</option>
-                    <option value="4">Daily or intense exercise 3-4 times per week</option>
-                    <option value="5">Intense exercise 6-7 times per week</option>
-                </select>
-            </label>
-            <label class="form-label" for="userGoal">
-                Goal
-                <select class="form-input" id="userGoal">
-                    <option value="1">Weight loss - 10% body mass per week</option>
-                    <option value="2">Mild weight loss - 5% body mass per week</option>
-                    <option value="3">Maintain weight</option>
-                    <option value="4">Mild weight gain - 5% body mass per week</option>
-                    <option value="5">Weight gain - 10% body mass per week</option>
-                </select>
-            </label>
+      <h2 class="calc-title">Calculate your makro</h2>
+      <form class="form">
+        <label class="form-label" for="userAge">
+            Age
+            <input type="number" min="16" max="100" step="1" class="form-input" id="userAge">
+        </label>
+        <label class="form-label" for="userGender">
+            Gender
+            <select class="form-input" id="userGender">
+                <option value="1">Male</option>
+                <option value="2">Female</option>
+                <option value="3">Other</option>
+                <option value="4">Rather not disclose</option>
+            </select>
+        </label>
+        <label class="form-label" for="userHeight">
+            Height
+            <input type="number" min="100" max="250" step="1" placeholder="cm" class="form-input" id="userHeight">
+        </label>
+        <label class="form-label" for="userWeight">
+            Weight
+            <input type="number" min="10" max="500" step="1" placeholder="kg" class="form-input" id="userWeight">
+        </label>
+        <label class="form-label" for="userActivity">
+            Activity
+            <select class="form-input" id="userActivity">
+                <option value="1">Little or no exercise</option>
+                <option value="2">1-3 times per week</option>
+                <option value="3">4-5 times per week</option>
+                <option value="4">Daily or intense exercise 3-4 times per week</option>
+                <option value="5">Intense exercise 6-7 times per week</option>
+            </select>
+        </label>
+        <label class="form-label" for="userGoal">
+            Goal
+            <select class="form-input" id="userGoal">
+                <option value="1">Weight loss - 10% body mass per week</option>
+                <option value="2">Mild weight loss - 5% body mass per week</option>
+                <option value="3">Maintain weight</option>
+                <option value="4">Mild weight gain - 5% body mass per week</option>
+                <option value="5">Weight gain - 10% body mass per week</option>
+            </select>
+        </label>
+        <button type="submit" class="form-button" id="submitButton">Calculate</button>
+      </form>
 
-            <button type="submit" class="form-button" id="submitButton">Calculate</button>
-        </form>
-
-        <div>
-            <ul class="makro">
-                <li class="makro-item">
-                    <h3 class="makro-title">Food energy</h3>
-                    <div class="makro-data" id="makroFoodEnergy"></div>
-                </li>
-                <li class="makro-item">
-                    <h3 class="makro-title">Protein</h3>
-                    <div class="makro-data" id="makroProtein"></div>
-                </li>
-                <li class="makro-item">
-                    <h3 class="makro-title">Carbs</h3>
-                    <div class="makro-data" id="makroCarbs"></div>
-                </li>
-                <li class="makro-item">
-                    <h3 class="makro-title">Fats</h3>
-                    <div class="makro-data" id="makroFats"></div>
-                </li>
-            </ul>
-        </div>
+      <div>
+        <ul class="makro">
+            <li class="makro-item">
+                <h3 class="makro-title">Food energy</h3>
+                <div class="makro-data" id="makroFoodEnergy"><p>0 kcal</p></div>
+            </li>
+            <li class="makro-item">
+                <h3 class="makro-title">Protein</h3>
+                <div class="makro-data" id="makroProtein"><p>0 g</p></div>
+            </li>
+            <li class="makro-item">
+                <h3 class="makro-title">Carbs</h3>
+                <div class="makro-data" id="makroCarbs"><p>0 g</p></div>
+            </li>
+            <li class="makro-item">
+                <h3 class="makro-title">Fats</h3>
+                <div class="makro-data" id="makroFats"><p>0 g</p></div>
+            </li>
+        </ul>
+      </div>
     </div>
 
     <div class="nutri">
@@ -130,71 +129,71 @@
 
       <div class="nutri-options">
         <div class="ingredients">
-          <h3>By ingredients</h3>
           <form>
-            <label for="searchList">Name</label>
-            <input type="text" list="searchList" placeholder="Search ingredients..." id="searchInput" >
-            <datalist id="searchList"></datalist>
-            <label for="searchList">Amount</label>
-            <input type="number" placeholder="g" id="amount">
+            <label for="searchList" class="ingr-form">Name
+              <input type="text" list="searchList" placeholder="Search ingredients..." id="searchInput" >
+              <datalist id="searchList"></datalist>
+            </label>
+            <label for="searchList" class="ingr-form">Amount
+              <input type="number" placeholder="g" id="amount">
+            </label>
             <button type="button" id="addButton">Add</button>
           </form>
         </div>
-
-        <!-- <div class="meals">
-          <h3>By meals</h3>
-          <div>
-            <button type="button" class="form-button" id="generateButton">Generate meals</button>
-            <div id="generatedMeals">
-            </div>
-          </div>
-        </div> -->
       </div>
-
+      
       <div class="user-data">
-        <h3>Name</h3>
-        <h3>Amount</h3>
+        <div class="user-data-titles">
+          <h3 class="user-data-title">Name</h3>
+          <h3 class="user-data-title">Amount</h3>
+        </div>
         <ul class="user-list" id="userList">
-          
         </ul>
-        
-
       </div>
 
       <div class="results">
-          <ul class="results-makro">
-            <li class="results-makro-item">
-                <h3 class="results-makro-title">Food energy</h3>
-                <div class="results-makro-data" id="makroFoodEnergyResult">
-                  <p>0 kcal</p>
-                </div>
-            </li>
-            <li class="makro-item">
-                <h3 class="results-makro-title">Protein</h3>
-                <div class="results-makro-data" id="makroProteinResult">
-                  <p>0 g</p>
-                </div>
-            </li>
-            <li class="makro-item">
-                <h3 class="results-makro-title">Carbs</h3>
-                <div class="results-makro-data" id="makroCarbsResult">
-                  <p>0 g</p>
-                </div>
-            </li>
-            <li class="makro-item">
-                <h3 class="results-makro-title">Fats</h3>
-                <div class="results-makro-data" id="makroFatsResult">
-                  <p>0 g</p>
-                </div>
-            </li>
+        <ul class="results-makro">
+          <li class="results-makro-item">
+              <h3 class="results-makro-title">Food energy</h3>
+              <div class="results-makro-data" id="makroFoodEnergyResult">
+                <p>0 kcal</p>
+              </div>
+          </li>
+          <li class="makro-item">
+              <h3 class="results-makro-title">Protein</h3>
+              <div class="results-makro-data" id="makroProteinResult">
+                <p>0 g</p>
+              </div>
+          </li>
+          <li class="makro-item">
+              <h3 class="results-makro-title">Carbs</h3>
+              <div class="results-makro-data" id="makroCarbsResult">
+                <p>0 g</p>
+              </div>
+          </li>
+          <li class="makro-item">
+              <h3 class="results-makro-title">Fats</h3>
+              <div class="results-makro-data" id="makroFatsResult">
+                <p>0 g</p>
+              </div>
+          </li>
         </ul>
+      </div>
+
+      <div class="meals">
+        <h2>Try this meals</h2>
+        <div>
+          <button type="button" class="form-button" id="generateButton">Generate ideas</button>
+          <div id="generatedMeals">
+          </div>
+        </div>
       </div>
     </div>
   </main>
 
   <footer class="footer">
     <div class="footer-main">
-      <div class="footer-logo">
+      <a href="#" class="footer-logo">
         <svg width="40" height="40">
           <use
             href="./images/icons/symbol-defs.svg#icon-vegan"
@@ -202,47 +201,47 @@
           </use>
         </svg>
         <p class="footer-name">Go Vegan</p>
-      </div>
-
+      </a>
+        
       <div class="footer-socials">
         <p class="footer-socials-title">Social media</p>
         <ul class="footer-socials-icons">
           <li>
-            <a href="https://www.instagram.com/">
+            <a href="https://www.instagram.com/" class="footer-socials-icon">
               <svg width="35" height="35">
                 <use
                   href="./images/icons/symbol-defs.svg#icon-instagram"
-                  class="footer-socials-icon">
+                  class="footer-socials-svg">
                 </use>
               </svg>
             </a>
           </li>
           <li>
-            <a href="https://www.facebook.com/">
+            <a href="https://www.facebook.com/" class="footer-socials-icon">
               <svg width="35" height="35">
                 <use
                   href="./images/icons/symbol-defs.svg#icon-facebook"
-                  class="footer-socials-icon">
+                  class="footer-socials-svg">
                 </use>
               </svg>
             </a>
           </li>
           <li>
-            <a href="https://www.twitter.com/">
+            <a href="https://www.twitter.com/" class="footer-socials-icon">
               <svg width="35" height="35">
                 <use
                   href="./images/icons/symbol-defs.svg#icon-twitter"
-                  class="footer-socials-icon">
+                  class="footer-socials-svg">
                 </use>
               </svg>
             </a>
           </li>
           <li>
-            <a href="https://www.https://github.com/dag-szad/uni-project.com/">
+            <a href="https://github.com/dag-szad/uni-project" class="footer-socials-icon">
               <svg width="35" height="35">
                 <use
                   href="./images/icons/symbol-defs.svg#icon-git-repository"
-                  class="footer-socials-icon">
+                  class="footer-socials-svg">
                 </use>
               </svg>
             </a>
@@ -253,8 +252,8 @@
       <div class="footer-addon">
         <p class="footer-title">Something useful</p>
         <ul class="footer-links">
-          <li>Something</li>
-          <li>Something</li>
+          <li><a href="#" class="footer-link">Something</a></li>
+          <li><a href="#" class="footer-link">Something</a></li>
         </ul>
       </div>
     </div>
