@@ -1,5 +1,7 @@
+// Imports
 import { ingredients } from "./ingredientsList.js";
 
+// Nutri count based on new amount
 export function nutrientsCount() {
   const searchInput = document.querySelector("#searchInput").value.toLowerCase();
   const amount = document.querySelector("#amount").value;
@@ -21,6 +23,7 @@ export function nutrientsCount() {
   };
 }
 
+// Switch for adding nutri result
 export function nutrientsAdd(prop) {
   const result = nutrientsCount();
 

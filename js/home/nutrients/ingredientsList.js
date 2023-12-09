@@ -217,7 +217,7 @@ export const ingredients = [
   },
   {
     id: 28,
-    name: "Kotlety sojowe",
+    name: "Seitan",
     kcal: 322,
     proteins: 34,
     carbs: 14,
